@@ -46,6 +46,7 @@ export default function NavBar() {
                     onClick={() => {
                       localStorage.removeItem("userId");
                       localStorage.removeItem("userName");
+                      window.location.reload()
                     }}
                     className=" py-2 pl-3 border hover:bg-black pr-4"
                   >

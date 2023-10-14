@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import AppContext from "../Context/AppContext";
-import SelecteRoute from "./SelecteRoute";
+import SelectedRoute from "./SelectedRoute";
 import data from "../dummyDataj.json"
 import UserContext from "../Context/UserContext";
 
@@ -51,7 +51,7 @@ export default function List({}: Props) {
   });
 
   return (
-    <div className="bg-slate-300 rounded-3xl mt-[5vh] min-w-[359px] max-w-6xl ">
+    <div className=" rounded-3xl mt-[5vh] min-w-[359px] max-w-6xl ">
       {filteredData.length < 1 && (
         <h1 className="bg-red-100 text-center text-3xl rounded-md">
       
@@ -60,13 +60,13 @@ export default function List({}: Props) {
       )}
       {showRoute === 0
         ? filteredData.map((item,index) => (
-            <div className="flex m-2 border text-xs lg:text-xl rounded-3xl py-2 px-2 justify-around items-center text-center" key={item.id}>
-              <h2>
+            <div className="flex m-2 bg-slate-300 border text-xs lg:text-lg rounded-3xl py-2 px-2 justify-around items-center text-center" key={item.id}>
+              <h2 className="px-1 border-r">
                 Tarih: <br></br> {item.depDate}
               </h2>
-              <h2>Kalkış Saati: <br></br> {item.depClock}</h2>
-              <h2>Ücret: <br></br> {item.price} ₺</h2>
-              <h2>Boş Koltuk Sayısı: <br></br> {emptySeatArray[index].toString()}</h2>
+              <h2 className="px-1 border-r">Kalkış Saati: <br></br> {item.depClock}</h2>
+              <h2 className="px-1 border-r">Ücret: <br></br> {item.price} ₺</h2>
+              <h2 className="px-1 border-r">Boş Koltuk Sayısı: <br></br> {emptySeatArray[index].toString()}</h2>
 
               <button
                 className="mx-2 bg-green-400 px-3 rounded-3xl"
@@ -79,7 +79,7 @@ export default function List({}: Props) {
               </button>
             </div>
           ))
-        : <SelecteRoute/>}
+        : <SelectedRoute/>}
     </div>
   );
 }

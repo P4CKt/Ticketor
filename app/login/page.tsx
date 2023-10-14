@@ -28,6 +28,7 @@ export default function login() {
         router.push("/")
         localStorage.setItem("userId",user.id)
         localStorage.setItem("userName",user.name)
+        localStorage.setItem("gender",user.gender)
       }
     }
   };

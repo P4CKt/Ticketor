@@ -13,6 +13,7 @@ export default function RootLayout({
   const [data, setData] = useState([]);
   const [userId,setUserId]= useState("")
   const [username,setUserName]= useState("")
+  const [gender]= useState("")
   const [submit, setSubmit] = useState<Boolean>(true);
   return (
     <html lang="en">
@@ -22,7 +23,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </Head>
-      <UserContext.Provider value={{ data, setData,submit, setSubmit ,username,setUserName,userId,setUserId}}>
+      <UserContext.Provider value={{ data, setData,submit, setSubmit ,username,setUserName,userId,setUserId,gender}}>
         <body>{children}</body>
       </UserContext.Provider>
     </html>

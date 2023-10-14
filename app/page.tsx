@@ -22,7 +22,7 @@ export default function Home() {
   });
   const { submit, setSubmit } = useContext(UserContext);
   const [showRoute, setShowRoute] = useState<Number>(0);
-
+  const [clickedSeat, setClickedSeat] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen">
@@ -34,11 +34,10 @@ export default function Home() {
             value={{
               selected,
               setSelected,
-      
+              clickedSeat, setClickedSeat,
               setShowRoute,
               showRoute,
-         
-            }}
+                     }}
           >
             {submit === true ? <Search /> : <List />}
           </AppContext.Provider>

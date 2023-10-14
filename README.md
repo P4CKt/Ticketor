@@ -5,6 +5,8 @@
 
 -2.npm run dev
 
+-3.sefer aramasında 18.10.2023 tarihini seçiniz (sefer dataları o tarihe giriş yapıldı)
+
 
 # Deploy Hali
 [Bağlantı](https://ticketor-tawny.vercel.app/)
