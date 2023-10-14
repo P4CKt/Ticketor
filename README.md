@@ -1,9 +1,13 @@
 
 # Çalıştırma Aşamaları
-1.npm install
-2.npm run dev
+
+-1.npm install
+
+-2.npm run dev
+
+
 # Deploy Hali
-wewew
+[Bağlantı](https://ticketor-tawny.vercel.app/)
 # Kullanılan Teknolojiler
 -nextJs (13.5.4) ==> Projeyi çalıştıran React FrameWork'ü.
 
